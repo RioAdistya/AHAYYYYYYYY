@@ -29,7 +29,7 @@
 		<i class="bi bi-box-arrow-in-right me-2"></i> Login
 	</button>
 </form>
-<div class="text-center mt-5 text-lg fs-4">
+{{-- <div class="text-center mt-5 text-lg fs-4">
 	<p class="text-gray-600">Belum punya akun?
 		<a href="{{ route('register') }}" class="font-bold">Daftar</a>
 	</p>
@@ -38,5 +38,5 @@
 			Lupa Password
 		</a>
 	</p>
-</div>
+</div> --}}
 @endsection

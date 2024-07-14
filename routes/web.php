@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,4 +97,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 		});
 		Route::post('logout', 'AuthController@logout')->name('logout');
 	});
+	Route::resource('employees', EmployeeController::class);
 });

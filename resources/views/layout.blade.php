@@ -57,33 +57,40 @@
                                     <i class="bi bi-house-fill"></i> <span>Beranda</span>
                                 </a>
                             </li>
-                            <li class="sidebar-item has-sub">
-                                <a href="#" class="sidebar-link">
-                                    <i class="bi bi-clipboard-data-fill"></i> <span>Data Master</span>
-                                </a>
-                                <ul class="submenu">
-                                    <li class="submenu-item">
-                                        <a href="{{ route('kriteria.index') }}" class="submenu-link">
-                                            Kriteria
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="{{ route('subkriteria.index') }}" class="submenu-link">
-                                            Sub Kriteria
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="{{ route('alternatif.index') }}" class="submenu-link">
-                                            Alternatif
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item">
-                                        <a href="{{ route('alternatif.index') }}" class="submenu-link">
-                                            Pegawai
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            @if(Auth::user()->role === 'admin')
+                                <li class="sidebar-item">
+                                    <a href="{{ route('employees.index') }}" class="sidebar-link">
+                                        <i class="bi bi-person-plus"></i> <span>Karyawan</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item has-sub">
+                                    <a href="#" class="sidebar-link">
+                                        <i class="bi bi-clipboard-data-fill"></i> <span>Data Master</span>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="submenu-item">
+                                            <a href="{{ route('kriteria.index') }}" class="submenu-link">
+                                                Kriteria
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="{{ route('subkriteria.index') }}" class="submenu-link">
+                                                Sub Kriteria
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="{{ route('alternatif.index') }}" class="submenu-link">
+                                                Alternatif
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a href="{{ route('alternatif.index') }}" class="submenu-link">
+                                                Pegawai
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endif
                             <li @class([
                                 'sidebar-item',
                                 'has-sub',
